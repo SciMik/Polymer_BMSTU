@@ -104,9 +104,9 @@ def parse_lammps_data(file_name):
         C_Fourier = [coeffs[1], coeffs[2], coeffs[3], coeffs[4]]
         # print(C_Fourier)
         coeffs_RB[0] = C_Fourier[0] + C_Fourier[2]
-        coeffs_RB[1] = - C_Fourier[0] + 3 * C_Fourier[2]
+        coeffs_RB[1] = C_Fourier[0] - 3 * C_Fourier[2]
         coeffs_RB[2] = 2 * C_Fourier[1] - 8 * C_Fourier[3]
-        coeffs_RB[3] = - 4 * C_Fourier[2]
+        coeffs_RB[3] = 4 * C_Fourier[2]
         coeffs_RB[4] = 8 * C_Fourier[3]
 
         dihedral_coeffs[dihedral_type] = coeffs_RB
